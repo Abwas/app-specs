@@ -2,9 +2,7 @@
 
 System to manage articles (or links in general) that already have been consumed.
 
-## Functionalities
-
-### API Endpoint Reference
+## API Endpoint Reference
 
 - **Web API Base URL:** `http://localhost:3000/api`
 
@@ -19,6 +17,26 @@ Method | Endpoint | Usage | Returns
 `DELETE` | `/v1/links/:categoryName` | Delete links of a given category | -
 
 Use the table above as a quick reference.
+
+## Functionalities
+
+### 1. Save a link
+
+Save a link in your database.
+
+- **URL**:
+  - `/v1/links`
+- **Method**:
+  - `POST`
+- **Data params**:
+   ```js
+   {
+     title: string,     // required
+     url: string,       // required
+     category: string,  // optional
+     rate: number       // required
+   }
+   ```
 
 ## Credit
 
