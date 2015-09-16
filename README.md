@@ -2,13 +2,11 @@
 
 A curated list of applications specifications for you practice new technologies, improve your portfolio and sharpen your skills.
 
-<p align="center">
 ⚡ | Beginner | Intermediate | Advanced
 :--: | :--: | :--: | :--:
 **Backend** | [1](https://github.com/ericdouglas/app-specs/tree/master/backend/beginner) | [0](https://github.com/ericdouglas/app-specs/tree/master/backend/intermediate) | [0](https://github.com/ericdouglas/app-specs/tree/master/backend/advanced)
 **Frontend** | [1](https://github.com/ericdouglas/app-specs/tree/master/frontend/beginner) | [0](https://github.com/ericdouglas/app-specs/tree/master/frontend/intermediate) | [0](https://github.com/ericdouglas/app-specs/tree/master/frontend/advanced)
 **FullStack** | [0](https://github.com/ericdouglas/app-specs/tree/master/fullstack/beginner) | [0](https://github.com/ericdouglas/app-specs/tree/master/fullstack/intermediate) | [0](https://github.com/ericdouglas/app-specs/tree/master/fullstack/advanced)
-</p>
 
 ## Table of Contets
 
