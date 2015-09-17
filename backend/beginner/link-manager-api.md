@@ -67,14 +67,14 @@ Save a link in your database.
 
 - **Sample Call**:
 
-`cURL`
-
-```shell
-curl http://localhost:3000/api/books \
--d 'title=cURL Book' \
--d 'genre=Technical' \
--d 'author=Eric Douglas'
-```
+  `cURL`
+  
+  ```shell
+  curl http://localhost:3000/api/books \
+  -d 'title=cURL Book' \
+  -d 'genre=Technical' \
+  -d 'author=Eric Douglas'
+  ```
 
 ## Credit
 
