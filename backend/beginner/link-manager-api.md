@@ -183,6 +183,56 @@ Retrieve one specific link from your database.
   curl http://localhost:3000/api/v1/links/507f1f77bcf86cd799439011
   ```
 
+### 4. Get all links of a given category
+
+Retrieve all links of a specific category from your database.
+
+- **URL**:
+  - `/v1/links?category=name`
+- **Method**:
+  - `GET`
+- **URL Params**:
+  - **Required**:
+    - `category=[alphanumeric]`
+- **Data params**:
+  - None
+- **Success Response**:
+  - **Status Code**: `200 OK`
+  - **Content**:
+
+  ```js
+  [
+    {
+      "id": "507f1f77bcf86cd799439011",
+      "title": "Getting started with ECMAScript 6",
+      "url": "http://www.2ality.com/2015/08/getting-started-es6.html",
+      "category": "javascript",
+      "rate": 5,
+      "createdAt": "2015-09-17T12:51:11.159Z", // ISODate format
+      "updatedAt": null,
+    },
+    ...
+  ]
+  ```
+
+- **Error Response**:
+  - **Status Code**: `500 Internal Server Error`
+  - **Content**: 
+
+  ```js
+  {
+    "error": "Sorry, a problem occurred in our servers."
+  }
+  ```
+
+- **Sample Call**:
+
+  `cURL`
+  
+  ```shell
+  curl http://localhost:3000/api/v1/links?category=javascript`
+  ```
+
 ## Credit
 
 - Author: Eric Douglas
