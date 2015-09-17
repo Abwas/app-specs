@@ -20,7 +20,7 @@ Method | Endpoint | Usage | Returns
 `GET` | `/v1/links` | Get all links | Array with links
 `GET` | `/v1/links/:linkId` | Get a link | Link JSON object
 `GET` | `/v1/links?category=name` | Get all links of a given category | Array with links
-`PATCH` | `/v1/links/:linkId` | Update part of a link | Link JSON object
+`PATCH` | `/v1/links/:linkId` | Update part of a link | -
 `DELETE` | `/v1/links/:linkId` | Delete a link | -
 `DELETE` | `/v1/links/:categoryName` | Delete links of a given category | -
 
@@ -260,19 +260,7 @@ Because we'll need to just update a **part** of our resource, we should use the 
 - **Success Response**:
   - **Status Code**: `200 OK`
   - **Content**:
-
-  ```js
-  {
-    "id": "507f1f77bcf86cd799439011",
-    "title": "Getting started with ECMAScript 6",
-    "url": "http://www.2ality.com/2015/08/getting-started-es6.html",
-    "category": "javascript",
-    "rate": 5,
-    "createdAt": "2015-09-17T12:51:11.159Z", // ISODate format
-    "updatedAt": "2015-09-17T13:31:13.159Z" // ISODate format
-  }
-  ```
-
+    None
 - **Error Response**:
   - **Status Code**: `500 Internal Server Error`
   - **Content**: 
@@ -291,6 +279,42 @@ Because we'll need to just update a **part** of our resource, we should use the 
   curl http://localhost:3000/api/v1/links/507f1f77bcf86cd799439011 \
   -X PATCH \
   -d 'category=es2015'
+  ```
+
+### 6. Delete a link
+
+Delete a specific link in your database.
+
+- **URL**:
+  - `/v1/links/:linkId`
+- **Method**:
+  - `DELETE`
+- **URL Params**:
+  - **Required**:
+    - `linkId=[alphanumeric]`
+- **Data params**:
+  - None
+- **Success Response**:
+  - **Status Code**: `200 OK`
+  - **Content**:
+    None
+- **Error Response**:
+  - **Status Code**: `500 Internal Server Error`
+  - **Content**: 
+
+  ```js
+  {
+    "error": "Sorry, a problem occurred in our servers."
+  }
+  ```
+
+- **Sample Call**:
+
+  `cURL`
+  
+  ```shell
+  curl http://localhost:3000/api/v1/links/507f1f77bcf86cd799439011 \
+  -X DELETE
   ```
 
 ## Credit
