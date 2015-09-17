@@ -44,7 +44,7 @@ Save a link in your database.
    {
      title: string,     // required
      url: string,       // required
-     category: string,  // optional - store the lowerCase value
+     category: string,  // optional - store the value in lowercase
      rate: number       // required
    }
    ```
@@ -81,6 +81,7 @@ Save a link in your database.
   
   ```shell
   curl http://localhost:3000/api/v1/links \
+  -X POST \
   -d 'title=Getting started with ECMAScript 6' \
   -d 'url=http://www.2ality.com/2015/08/getting-started-es6.html' \
   -d 'category=javascript' \
@@ -233,6 +234,65 @@ Retrieve all links of a specific category from your database.
   curl http://localhost:3000/api/v1/links?category=javascript`
   ```
 
+### 5. Update part of a link
+
+Because we'll need to just update a **part** of our resource, we should use the `PATCH` HTTP method, instead of the most frequently used `PUT` method.
+
+- **OBS**: The `PUT` method should be used when you will update **all** fields of your resource.
+
+- **URL**:
+  - `/v1/links/:linkId`
+- **Method**:
+  - `PATCH`
+- **URL Params**:
+  - **Required**:
+    - `linkId=[alphanumeric]`
+- **Data params**:
+
+  ```js
+  {
+   title: string,     // optional
+   url: string,       // optional
+   category: string,  // optional - store the value in lowercase
+   rate: number       // optional
+  }
+  ```
+- **Success Response**:
+  - **Status Code**: `200 OK`
+  - **Content**:
+
+  ```js
+  {
+    "id": "507f1f77bcf86cd799439011",
+    "title": "Getting started with ECMAScript 6",
+    "url": "http://www.2ality.com/2015/08/getting-started-es6.html",
+    "category": "javascript",
+    "rate": 5,
+    "createdAt": "2015-09-17T12:51:11.159Z", // ISODate format
+    "updatedAt": "2015-09-17T13:31:13.159Z" // ISODate format
+  }
+  ```
+
+- **Error Response**:
+  - **Status Code**: `500 Internal Server Error`
+  - **Content**: 
+
+  ```js
+  {
+    "error": "Sorry, a problem occurred in our servers."
+  }
+  ```
+
+- **Sample Call**:
+
+  `cURL`
+  
+  ```shell
+  curl http://localhost:3000/api/v1/links/507f1f77bcf86cd799439011 \
+  -X PATCH \
+  -d 'category=es2015'
+  ```
+
 ## Credit
 
 - Author: Eric Douglas
@@ -257,3 +317,4 @@ Retrieve all links of a specific category from your database.
 1. [HTTP Common Status Code](https://gist.github.com/ericdouglas/b099aa9f07d715aaf3fd)
 1. [curl usage explained](http://curl.haxx.se/docs/manual.html)
 1. [What's the difference between REST & RESTful](http://stackoverflow.com/a/1568858/2849745)
+1. [How cURL commands work](http://docs.rackspace.com/images/api/v2/ci-devguide/content/curl_stuff.html)
