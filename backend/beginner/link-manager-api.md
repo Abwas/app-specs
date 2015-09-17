@@ -1,6 +1,14 @@
 # Link Manager API
 
-System to manage articles (or links in general) that already have been consumed.
+Build a RESTful API application to manage articles (or links in general) that already have been consumed.
+
+## Table of Contents
+
+- [API Endpoint Reference](#api-endpoint-reference)
+- [Functionalities](#functionalities)
+- [Credit](#credit)
+- [Implementations](#implementations)
+- [References](#references)
 
 ## API Endpoint Reference
 
@@ -150,3 +158,4 @@ Retrieve all links in your database.
 1. [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 1. [HTTP Common Status Code](https://gist.github.com/ericdouglas/b099aa9f07d715aaf3fd)
 1. [curl usage explained](http://curl.haxx.se/docs/manual.html)
+1. [What's the difference between REST & RESTful](http://stackoverflow.com/a/1568858/2849745)
