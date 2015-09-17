@@ -325,11 +325,15 @@ Delete a specific link in your database.
 
 ## Implementations
 
-- Author: 
-- GitHub:
-- Source Code: [link]()
+- Author: Eric Douglas
+- GitHub: [@ericdouglas](https://github.com/ericdouglas)
+- Source Code: [link](https://github.com/ericdouglas/link-manager-api)
 - Live demo: [link]()
 - Stack: 
+  - Node.js
+  - ECMAScript 2015
+  - Express
+  - MongoDB
 
 ## References
 
