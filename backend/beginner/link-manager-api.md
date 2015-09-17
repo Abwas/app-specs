@@ -1,6 +1,6 @@
 # Link Manager API
 
-Build a RESTful API application to manage articles (or links in general) that already have been consumed.
+Build a RESTful API Web Service to manage articles (or links in general) that already have been consumed.
 
 ## Table of Contents
 
