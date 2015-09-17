@@ -18,10 +18,10 @@ Method | Endpoint | Usage | Returns
 :-- | :-- | :-- | :--
 `POST` | `/v1/links` | Save a link | Link JSON object
 `GET` | `/v1/links` | Get all links | Array with links
-`GET` | `/v1/links/:linkID` | Get a link | Link JSON object
+`GET` | `/v1/links/:linkId` | Get a link | Link JSON object
 `GET` | `/v1/links?category=name` | Get all links of a given category | Array with links
-`PATCH` | `/v1/links/:linkID` | Update part of a link | Link JSON object
-`DELETE` | `/v1/links/:linkID` | Delete a link | -
+`PATCH` | `/v1/links/:linkId` | Update part of a link | Link JSON object
+`DELETE` | `/v1/links/:linkId` | Delete a link | -
 `DELETE` | `/v1/links/:categoryName` | Delete links of a given category | -
 
 Use the table above as a quick reference.
@@ -58,7 +58,7 @@ Save a link in your database.
     "id": "507f1f77bcf86cd799439011",
     "title": "Getting started with ECMAScript 6",
     "url": "http://www.2ality.com/2015/08/getting-started-es6.html",
-    "category": "JavaScript",
+    "category": "javascript",
     "rate": 5,
     "createdAt": "2015-09-17T12:51:11.159Z", // ISODate format
     "updatedAt": null,
@@ -80,15 +80,16 @@ Save a link in your database.
   `cURL`
   
   ```shell
-  curl http://localhost:3000/api/books \
-  -d 'title=cURL Book' \
-  -d 'genre=Technical' \
-  -d 'author=Eric Douglas'
+  curl http://localhost:3000/api/v1/links \
+  -d 'title=Getting started with ECMAScript 6' \
+  -d 'url=http://www.2ality.com/2015/08/getting-started-es6.html' \
+  -d 'category=javascript' \
+  -d 'rate=5'
   ```
 
 ### 2. Get all links
 
-Retrieve all links in your database.
+Retrieve all links from your database.
 
 - **URL**:
   - `/v1/links`
@@ -108,7 +109,7 @@ Retrieve all links in your database.
       "id": "507f1f77bcf86cd799439011",
       "title": "Getting started with ECMAScript 6",
       "url": "http://www.2ality.com/2015/08/getting-started-es6.html",
-      "category": "JavaScript",
+      "category": "javascript",
       "rate": 5,
       "createdAt": "2015-09-17T12:51:11.159Z", // ISODate format
       "updatedAt": null,
@@ -132,7 +133,54 @@ Retrieve all links in your database.
   `cURL`
   
   ```shell
-  curl http://localhost:3000/api/books
+  curl http://localhost:3000/api/v1/links
+  ```
+
+### 3. Get a link
+
+Retrieve one specific link from your database.
+
+- **URL**:
+  - `/v1/links/:linkId`
+- **Method**:
+  - `GET`
+- **URL Params**:
+  - **Required**:
+    - `linkId=[alphanumeric]`
+- **Data params**:
+  - None
+- **Success Response**:
+  - **Status Code**: `200 OK`
+  - **Content**:
+
+  ```js
+  {
+    "id": "507f1f77bcf86cd799439011",
+    "title": "Getting started with ECMAScript 6",
+    "url": "http://www.2ality.com/2015/08/getting-started-es6.html",
+    "category": "javascript",
+    "rate": 5,
+    "createdAt": "2015-09-17T12:51:11.159Z", // ISODate format
+    "updatedAt": null,
+  }
+  ```
+
+- **Error Response**:
+  - **Status Code**: `500 Internal Server Error`
+  - **Content**: 
+
+  ```js
+  {
+    "error": "Sorry, a problem occurred in our servers."
+  }
+  ```
+
+- **Sample Call**:
+
+  `cURL`
+  
+  ```shell
+  curl http://localhost:3000/api/v1/links/507f1f77bcf86cd799439011
   ```
 
 ## Credit
