@@ -325,6 +325,8 @@ Delete a specific link in your database.
 
 ## Implementations
 
+### #1
+
 - Author: Eric Douglas
 - GitHub: [@ericdouglas](https://github.com/ericdouglas)
 - Source Code: [link](https://github.com/ericdouglas/link-manager-api)
