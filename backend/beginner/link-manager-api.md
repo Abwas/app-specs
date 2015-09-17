@@ -28,13 +28,15 @@ Save a link in your database.
   - `/v1/links`
 - **Method**:
   - `POST`
+- **URL Params**:
+  - None
 - **Data params**:
 
    ```js
    {
      title: string,     // required
      url: string,       // required
-     category: string,  // optional
+     category: string,  // optional - store the lowerCase value
      rate: number       // required
    }
    ```
@@ -74,6 +76,55 @@ Save a link in your database.
   -d 'title=cURL Book' \
   -d 'genre=Technical' \
   -d 'author=Eric Douglas'
+  ```
+
+### 2. Get all links
+
+Retrieve all links in your database.
+
+- **URL**:
+  - `/v1/links`
+- **Method**:
+  - `GET`
+- **URL Params**:
+  - None
+- **Data params**:
+  - None
+- **Success Response**:
+  - **Status Code**: `200 OK`
+  - **Content**:
+
+  ```js
+  [
+    {
+      "id": "507f1f77bcf86cd799439011",
+      "title": "Getting started with ECMAScript 6",
+      "url": "http://www.2ality.com/2015/08/getting-started-es6.html",
+      "category": "JavaScript",
+      "rate": 5,
+      "createdAt": "2015-09-17T12:51:11.159Z", // ISODate format
+      "updatedAt": null,
+    },
+    ...
+  ]
+  ```
+
+- **Error Response**:
+  - **Status Code**: `500 Internal Server Error`
+  - **Content**: 
+
+  ```js
+  {
+    "error": "Sorry, a problem occurred in our servers."
+  }
+  ```
+
+- **Sample Call**:
+
+  `cURL`
+  
+  ```shell
+  curl http://localhost:3000/api/books
   ```
 
 ## Credit
