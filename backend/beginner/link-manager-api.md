@@ -22,9 +22,8 @@ Method | Endpoint | Usage | Returns
 `GET` | `/v1/links?category=name` | Get all links of a given category | Array with links
 `PATCH` | `/v1/links/:linkId` | Update part of a link | -
 `DELETE` | `/v1/links/:linkId` | Delete a link | -
-`DELETE` | `/v1/links/:categoryName` | Delete links of a given category | -
 
-Use the table above as a quick reference.
+> Use the table above as a quick reference.
 
 ## Functionalities
 
