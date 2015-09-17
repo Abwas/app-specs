@@ -2,6 +2,13 @@
 
 Short description of the app.
 
+## Table of Contents
+
+- [Functionalities](#functionalities)
+- [Credit](#credit)
+- [Implementations](#implementations)
+- [References](#references)
+
 ## Functionalities
 
 ### Name of the Functionality
