@@ -44,7 +44,7 @@ Save a link in your database.
      title: string,     // required
      url: string,       // required
      category: string,  // optional - store the value in lowercase
-     rate: number       // required
+     rate: number       // required - range 0 to 5
    }
    ```
 
