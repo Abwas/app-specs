@@ -1,6 +1,6 @@
 ![App Specs](http://i.imgur.com/XNpkcKK.png)
 
-A curated list of applications **specifications** and **implementations** for you practice new technologies, improve your portfolio and sharpen your skills.
+A curated list of applications **specifications** and **implementations** to practice new technologies, improve your portfolio and sharpen your skills.
 
 ⚡ | Beginner | Intermediate | Advanced
 :--: | :--: | :--: | :--:
