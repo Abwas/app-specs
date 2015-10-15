@@ -294,7 +294,7 @@ Delete a specific link in your database.
 - **Data params**:
   - None
 - **Success Response**:
-  - **Status Code**: `200 OK`
+  - **Status Code**: `204 No Content`
   - **Content**:
     None
 - **Error Response**:
