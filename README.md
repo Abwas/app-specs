@@ -93,9 +93,7 @@ You can help us in **several ways**! Some suggestions:
 
 ## Contributors
 
-[![Eric Douglas](https://secure.gravatar.com/avatar/7b4b31bf5e791b6d316462bfe6f943aa?s=130)](https://github.com/ericdouglas) |
-:---:|
-[Eric Douglas](https://github.com/ericdouglas) - Founder |
+[List of contributors](https://github.com/ericdouglas/app-specs/graphs/contributors).
 
 ## References
 
